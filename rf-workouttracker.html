@@ -5,121 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Favorite Workout Plan</title>
 </head>
 <body>
     <form>
         <div class="form-row">
-          <!-- <div class="form-group col-md-6">
-            <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          <div class="form-group col-sm-4">
+            <label for="workout-name">Exercise Name:</label>
+            <input type="text" class="form-control" id="workout-name" placeholder="Squats, pushups, treadmill,etc.">
           </div>
-          <div class="form-group col-md-6">
-            <label for="inputPassword4">Password</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+          <div class="form-group col-sm-1">
+            <label for="rep-number">Amount of Reps:</label>
+            <input type="number" class="form-control" id="rep-number" placeholder="#of reps">
           </div>
-        </div> -->
-        <div class="form-group">
-          <label for="inputAddress">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-        </div>
-        <div class="form-group">
-          <label for="inputAddress2">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity">
+        
+        <div class="form-group col-sm-2">
+            <label for="duration">Duration:</label>
+            <input type="text" class="form-control" id="duration" placeholder="Duration (in minutes)">
           </div>
-          <div class="form-group col-md-4">
-            <label for="inputState">State</label>
-            <select id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
+          <div class="form-group col-sm-4">
+            <label for="inputDay">Day of the Week</label>
+            <select id="inputDay" class="form-control">
+              <option selected>What day?</option>
+              <option>Sunday</option>
+              <option>Monday</option>
+              <option>Tuesday</option>
+              <option>Wednesday</option>
+              <option>Thursday</option>
+              <option>Friday</option>
+              <option>Saturday</option>
             </select>
           </div>
-          <div class="form-group col-md-2">
-            <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip">
-          </div>
         </div>
-        <div class="form-group">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
-            </label>
-          </div>
+    </div>
+        <button type="submit" class="btn btn-primary" id="enter-btn">Enter</button>
+    </form>
+   <div class="container" id="week">
+        <div class="card" id="sunday-card">
+            <div class="card-body">
+                <h5 class="card-title">Sunday</h5>
+            <ul id="sunday-card"></ul>
+           
+            </div>
         </div>
-        <button type="submit" class="btn btn-primary">Sign in</button>
-      </form>
-    <table class="table">
-        <thead class="thead-dark">
-        <tr>
-            <th scope="col">Sunday</th>
-            <th scope="col">Monday</th>
-            <th scope="col">Tuesday</th>
-            <th scope="col">Wednesday</th>
-            <th scope="col">Thursday</th>
-            <th scope="col">Friday</th>
-            <th scope="col">Saturday</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        </tbody>
-    </table>
-    
-    <table class="table">
-        <thead class="thead-light">
-        <tr>
-            <th scope="col">Sunday</th>
-            <th scope="col">Monday</th>
-            <th scope="col">Tuesday</th>
-            <th scope="col">Wednesday</th>
-            <th scope="col">Thursday</th>
-            <th scope="col">Friday</th>
-            <th scope="col">Saturday</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        </tbody>
-    </table>
+        <div class="card" >
+            <div class="card-body" >
+                <h5 class="card-title">Monday</h5>
+            <ul id="monday-card"></ul>
+            
+            </div>
+        </div>
+        <div class="card" >
+            <div class="card-body" >
+                <h5 class="card-title">Tuesday</h5>
+                <ul id="tuesday-card"></ul>
+            
+            </div>
+        </div>
+        <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">Wednesday</h5>
+                <ul id="wednesday-card"></ul>
+            
+            </div>
+        </div>
+        <div class="card" >
+            <div class="card-body">
+                <h5 class="card-title">Thursday</h5>
+                <ul id="thursday-card"></ul>
+            
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Friday</h5>
+                <ul id="friday-card"></ul>
+            
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Saturday</h5>
+                <ul id="saturday-card"></ul>
+            
+            </div>
+        </div>
+   </div>
 </body>
 </html>
